@@ -11,15 +11,7 @@
   </div>
 </div>
 <div class="main">
-  <div class="messages">
-    <div class="user">Hayato<span class="datetime">2021/05/14</span></div>
-    <div class="message">ありがとう</div>
-  </div>
-
-  <div class="messages">
-    <div class="user">Takashi<span class="datetime">2021/05/14</span></div>
-    <div class="message">テストです</div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
